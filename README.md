@@ -4,7 +4,7 @@ This script serves as a dynamic and real-time dashboard for monitoring the Relat
 
 Designed with simplicity in mind, the script utilizes the powerful ccxt library to seamlessly interact with the Binance API. The acquired data is intelligently structured into a Python DataFrame, facilitating efficient manipulation and organization of the information. This DataFrame acts as the foundation for the talib.RSI calculation, providing real-time insights into the relative strength of the selected cryptocurrency pairs.
 
-The calculated RSI values are not only processed but also persistently stored in an SQLite database. This ensures a continuous and up-to-date record of RSI trends over time. The culmination of this data is elegantly visualized through a straightforward Flask web application.
+The calculated RSI values are not only processed but also persistently stored in an SQLite database. This ensures a continuous and up-to-date record of RSI trends over time. The culmination of this data is visualized through a straightforward Flask web application.
 
 The web application, while intentionally kept simple in design, offers a user-friendly interface (responsive and i am not good at web design :P) for exploring and interpreting the RSI data. The integration of Flask facilitates seamless communication between the backend and frontend, enabling users to effortlessly access and comprehend the dynamic RSI metrics.
 
@@ -31,8 +31,11 @@ Docker
 Option 2: Manual Installation
 
 Flask==2.2.2
+
 pandas==1.5.2
+
 ccxt==2.5.83
+
 TA-Lib==0.4.25
 
 
@@ -43,6 +46,7 @@ Option 1: Docker
 Clone the repository:
 
 `git clone https://github.com/Abdelhamid-ben/rsi.git`
+
 `cd rsi`
 
 Build the Docker image:
