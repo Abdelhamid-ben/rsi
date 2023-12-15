@@ -40,11 +40,12 @@ Start :
 You can change in the app.py the time frame (default 4h)
 
 Example : 
-          1h > 1 hours
+1h > 1 hours timeframe
 
-          2h > 2 hours
-          
-          1m > 15 minute
+2h > 2 hours timeframe
+
+15m > 15 timeframe
+
 
 ## Contributing
 
