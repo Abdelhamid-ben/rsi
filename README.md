@@ -81,6 +81,11 @@ Adjust the timeframe in the app.py file according to your preference. The defaul
 
 Building the container might take a significant amount of time due to TA-LIB library requirements, including compilation and additional dependencies. If you have ideas on optimizing this process or any other improvements, contributions are welcome!
 
+A new simple script that sends telegramsignals (BUY/SELL) will be published soon.
+
+Thank you.
+
+
 ## LICENSE
 
 MIT License
