@@ -1,7 +1,17 @@
 # Flask RSI Data Collector
 
-This script collects Relative Strength Index (RSI) data for cryptocurrency pairs from Binance using the Binance API. The collected data is stored in an SQLite database and can be visualized using a Flask web application.
-the design in simple (i am not good at web design :P).
+This script serves as a dynamic and real-time dashboard for monitoring the Relative Strength Index (RSI) data of various cryptocurrency pairs on Binance. Leveraging the Binance API, the script systematically gathers comprehensive OHLCV (Open/High/Low/Close/Volume) data for all available Cryptocurrencies to USDT pairs, including popular examples like BTC/USDT and ALT/USDT.
+
+Designed with simplicity in mind, the script utilizes the powerful ccxt library to seamlessly interact with the Binance API. The acquired data is intelligently structured into a Python DataFrame, facilitating efficient manipulation and organization of the information. This DataFrame acts as the foundation for the talib.RSI calculation, providing real-time insights into the relative strength of the selected cryptocurrency pairs.
+
+The calculated RSI values are not only processed but also persistently stored in an SQLite database. This ensures a continuous and up-to-date record of RSI trends over time. The culmination of this data is elegantly visualized through a straightforward Flask web application.
+
+The web application, while intentionally kept simple in design, offers a user-friendly interface (responsive and i am not good at web design :P) for exploring and interpreting the RSI data. The integration of Flask facilitates seamless communication between the backend and frontend, enabling users to effortlessly access and comprehend the dynamic RSI metrics.
+
+It's important to note that the script is crafted to run indefinitely, ensuring the continuous collection and analysis of cryptocurrency data. While a time.sleep option is provided, allowing users to manage resource consumption, the script's adaptability and efficiency are designed to support prolonged and uninterrupted operation.
+
+In summary, this script amalgamates the power of the Binance API, ccxt, Python's data manipulation capabilities, and Flask's web framework to deliver a robust, real-time RSI monitoring tool for cryptocurrency enthusiasts. Whether tracking market trends or exploring investment opportunities, this script provides a reliable and user-friendly solution.
+
 
 ## Table of Contents
 
@@ -10,45 +20,59 @@ the design in simple (i am not good at web design :P).
 - [Configuration](#configuration)
 - [Contributing](#contributing)
 
+  
 ## Prerequisites
+Ensure you have the following dependencies installed:
+
+Option 1: Docker
 
 Docker
-_________________________
-or 
-_________________________
+Option 2: Manual Installation
+
 Flask==2.2.2
-
 pandas==1.5.2
-
 ccxt==2.5.83
-
 TA-Lib==0.4.25
 
-## Installation (Docker)
+
+## Installation
+
+Option 1: Docker
+
+Clone the repository:
 
 `git clone https://github.com/Abdelhamid-ben/rsi.git`
 `cd rsi`
 
-Build :
-docker build -t mid .
+Build the Docker image:
 
-Start :
+`docker build -t rsiapp`
+
 `docker run -p 8080:8080 rsiapp`
 
+
+Option 2: Manual Installation
+
+Install Python dependencies:
+
+`pip install -r requirements.txt`
+
+Run the application:
+
+`python app.py`
+
 ## Configuration
+Adjust the timeframe in the app.py file according to your preference. The default is set to 4 hours. Examples include:
 
-You can change in the app.py the time frame (default 4h)
-
-Example : 
-1h > 1 hours timeframe
-
-2h > 2 hours timeframe
-
-15m > 15 timeframe
+1h for a 1-hour timeframe.
+2h for a 2-hour timeframe.
+15m for a 15-minute timeframe.
 
 
 ## Contributing
+Building the container might take a significant amount of time due to TA-LIB library requirements, including compilation and additional dependencies. If you have ideas on optimizing this process or any other improvements, contributions are welcome!
 
-Well it will take a lot of time to build the container, that;s because i had a problem with TA-LIB library, it requires compilation and more libs, so if you have any idea how to avoid that, welcome.
+
+
 
 
