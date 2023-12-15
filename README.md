@@ -38,8 +38,12 @@ Start :
 ## Configuration
 
 You can change in the app.py the time frame (default 4h)
-Example : 1h > 1 hours
+
+Example : 
+          1h > 1 hours
+
           2h > 2 hours
+          
           1m > 15 minute
 
 ## Contributing
