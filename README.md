@@ -62,14 +62,18 @@ Run the application:
 `python app.py`
 
 ## Configuration
+
 Adjust the timeframe in the app.py file according to your preference. The default is set to 4 hours. Examples include:
 
 1h for a 1-hour timeframe.
+
 2h for a 2-hour timeframe.
+
 15m for a 15-minute timeframe.
 
 
 ## Contributing
+
 Building the container might take a significant amount of time due to TA-LIB library requirements, including compilation and additional dependencies. If you have ideas on optimizing this process or any other improvements, contributions are welcome!
 
 
